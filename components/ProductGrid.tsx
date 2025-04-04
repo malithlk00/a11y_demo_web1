@@ -14,6 +14,7 @@ interface Product {
   sales: string;
 }
 
+
 export default function ProductGrid() {
   const [products] = useState<Product[]>([
     {
