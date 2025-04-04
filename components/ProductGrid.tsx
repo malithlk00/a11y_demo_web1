@@ -106,18 +106,17 @@ export default function ProductGrid() {
             <div className="relative">
               <img 
                 src={product.image} 
-                alt={product.name} 
                 className="w-full h-48 object-cover"
               />
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs px-1 py-0.5 rounded">
+              <div className="absolute top-2 left-2" style={{backgroundColor: '#ffd700', color: '#ffffff'}}>
                 {product.discount}
               </div>
             </div>
             
             <div className="p-3">
-              <p className="text-sm line-clamp-2 h-10 mb-2">{product.name}</p>
-              <p className="text-red-500 font-bold">{product.price}</p>
-              <p className="text-gray-400 text-xs line-through">{product.originalPrice}</p>
+              <div className="text-sm line-clamp-2 h-10 mb-2" style={{color: '#a9a9a9'}}>{product.name}</div>
+              <div className="text-red-500 font-bold" style={{color: '#ff69b4'}}>{product.price}</div>
+              <div className="text-gray-400 text-xs line-through">{product.originalPrice}</div>
               
               <div className="flex items-center mt-2">
                 <div className="flex items-center">
@@ -125,6 +124,9 @@ export default function ProductGrid() {
                   <span className="text-xs ml-1">{product.rating}</span>
                 </div>
                 <span className="text-xs text-gray-500 ml-2">{product.sales}</span>
+              </div>
+              <div onClick={() => {}} className="mt-2 px-4 py-2 text-white text-center cursor-pointer" style={{backgroundColor: '#98fb98', color: '#ffffff'}}>
+                Add to cart
               </div>
             </div>
           </div>
